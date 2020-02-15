@@ -1,9 +1,9 @@
 import * as React from 'react';
 import cx from 'classnames';
-import { JustifyContentTypes } from '../../'
+import { JustifyContentTypes } from '../../Models/UIEnums'
 import './styles.scss';
 
-interface ILayoutProps = {
+interface ILayoutProps {
     jc: JustifyContentTypes,
     ai: AlignItemTypes,
 fullHeight: boolean,
@@ -13,15 +13,15 @@ direction: DirectionTypes,
 children: React.ReactChildren
 }
 
-const Layout = ({ jc, ai, fullHeight, widthAuto, classNames, direction, children }) => {
+const Layout = ({ jc, ai, fullHeight, widthAuto, className, direction, children }) => {
 	const classNames = cx(
 		'layout',
 		jc && `layout__jc_${jc}`,
 		ai && `layout__ai_${ai}`,
 		direction ? `layout__direction_${direction}` : 'layout__direction_row',
-		fullHeigth && 'layout__fullHeight',
+		fullHeight && 'layout__fullHeight',
 		widthAuto && 'layout__widthAuto',
-		classNames && classNames
+		className && className
 	);
 
 	return <div className={classNames}>{children}</div>;
