@@ -2,7 +2,7 @@ import * as React from 'react';
 import cx from 'classnames';
 import './style.scss';
 
-const Title = ({ color, marign, fontSize, uppercase, underline, nowrap, className, children }) => {
+const Description = ({ color, marign, fontSize, uppercase, underline, nowrap, className, children }) => {
 	const classNames = cx(
 		color ? `description__${color}` : 'description__black',
 		fontSize ? `description__fontSize_${fontSize}` : `description__fontSize_s`,
