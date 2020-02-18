@@ -1,9 +1,9 @@
 enum ColorTypes {
-    degault = 'black',
+    default = 'black',
     red = 'red',
     black = 'black',
     blue = 'blue',
-    green = 'green',
+    green = 'green'
 }
 
 enum FontSizeTypes {
@@ -13,7 +13,7 @@ enum FontSizeTypes {
     m = 's',
     l = 'l',
     xl = 'xl',
-    xxl = 'xxl',
+    xxl = 'xxl'
 }
 
 enum JustifyContentTypes {
@@ -23,26 +23,42 @@ enum JustifyContentTypes {
     spaceBetween = 'spaceBetween',
     spaceAround = 'spaceAround',
     spaceEvenly = 'spaceEvenly',
-    center = 'center',
+    center = 'center'
 }
 
 enum AlignItemsTypes {
     default = 'flexStart',
     flexStart = 'flexStart',
     flexEnd = 'flexEnd',
-    center = 'center',
+    center = 'center'
 }
 
-enum DiretionTypes {
+enum DirectionTypes {
     default = 'row',
     row = 'row',
     column = 'column'
 }
 
+enum MarginTypes {
+    default = '',
+    bottom = 'bottom',
+    top = 'top',
+    left = 'left',
+    right = 'right'
+}
+
+enum TagNameTypes {
+    default = 'h2',
+    h1 = 'h1',
+    h2 = 'h2'
+}
+
 export {
     ColorTypes,
     FontSizeTypes,
+    TagNameTypes,
     JustifyContentTypes,
     AlignItemsTypes,
-    DiretionTypes
-}
+    DirectionTypes,
+    MarginTypes
+};
