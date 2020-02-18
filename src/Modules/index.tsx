@@ -14,12 +14,12 @@ const getRenderingComponent = (props, component: string) => {
 };
 
 const PageBuilder = ({}) => {
-    console.log(routes);
     return (
         <Router>
             <Switch>
                 {routes.map(({ id, component, url, exact }) => (
                     <Route
+                        key={id}
                         path={url}
                         exact={exact}
                         render={props =>
