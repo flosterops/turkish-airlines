@@ -5,7 +5,7 @@ import {
     FontSizeTypes,
     MarginTypes,
     TagNameTypes
-} from '../../Models/UIEnums';
+} from '../../models/UIEnums';
 
 interface ITitleProps {
     color: ColorTypes;

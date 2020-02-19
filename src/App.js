@@ -1,6 +1,5 @@
 import React from 'react';
-import { PageBuilder } from './Modules/index.tsx';
-import logo from './logo.svg';
+import { PageBuilder } from 'modules';
 import './App.css';
 
 function App() {

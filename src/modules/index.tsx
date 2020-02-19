@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import routes from '../routes/config.json';
+import routes from 'routes/config.json';
 
 const getRenderingComponent = (props, component: string) => {
     switch (component) {
@@ -13,7 +13,7 @@ const getRenderingComponent = (props, component: string) => {
     }
 };
 
-const PageBuilder = ({}) => {
+const PageBuilder = () => {
     return (
         <Router>
             <Switch>
