@@ -1,11 +1,5 @@
 import axios from 'axios';
-
-enum RequestTypes {
-    get = 'get',
-    post = 'post',
-    put = ' put',
-    delete = 'delete'
-}
+import { RequestTypes } from 'models/RequestTypes';
 
 const request = (requestType: RequestTypes, url: string, params: any) => {
     return axios[requestType](url, params);
