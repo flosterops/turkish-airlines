@@ -1,0 +1,14 @@
+[
+    {
+        "id": "d068af24-3c35-42f5-9664-b7265181f88a",
+        "component": "Main",
+        "exact": true,
+        "url": "/"
+    },
+    {
+        "id": "d068af24-3c35-42f5-9664-b7265181f88b",
+        "component": "Different",
+        "exact": true,
+        "url": "/different"
+    }
+]
