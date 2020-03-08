@@ -6,15 +6,7 @@
         },
         "max-classes-per-file": false,
         "no-shadowed-variable": false,
-        "variable-name": [
-            true,
-            "ban-keywords",
-            "check-format",
-            "allow-leading-underscore",
-            "allow-snake-case",
-            "allow-pascal-case",
-            "require-const-for-all-caps"
-        ],
+        "variable-name": [false],
         "no-namespace": false,
         "curly": [false, "ignore-same-line"],
         "new-parens": true,
@@ -30,10 +22,7 @@
         "no-conditional-assignment": true,
         "no-consecutive-blank-lines": false,
         "array-callback-return": "off",
-        "no-console": {
-            "severity": "none",
-            "options": ["debug", "info", "log", "time", "timeEnd", "trace"]
-        }
+        "no-console": false
     },
     "jsRules": {
         "max-line-length": {
