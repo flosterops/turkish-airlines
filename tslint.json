@@ -6,7 +6,7 @@
         },
         "max-classes-per-file": false,
         "no-shadowed-variable": false,
-        "variable-name": [true, "ban-keywords", "check-format", "allow-leading-underscore", "allow-snake-case"],
+        "variable-name": [false],
         "no-namespace": false,
         "curly": [false, "ignore-same-line"],
         "new-parens": true,
