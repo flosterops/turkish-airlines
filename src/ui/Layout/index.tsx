@@ -4,8 +4,8 @@ import {
     JustifyContentTypes,
     AlignItemsTypes,
     DirectionTypes
-} from '../../models/UIEnums';
-import './styles.scss';
+} from 'models/UIEnums';
+import './style.scss';
 
 interface ILayoutProps {
     jc?: JustifyContentTypes;
@@ -15,6 +15,7 @@ interface ILayoutProps {
     className?: string;
     direction?: DirectionTypes;
     children?: React.ReactChildren;
+    pointer?: boolean;
 }
 
 const Layout: React.FC<ILayoutProps> = ({
@@ -24,10 +25,13 @@ const Layout: React.FC<ILayoutProps> = ({
     widthAuto,
     className,
     direction,
-    children
+    pointer,
+    children,
+    ...props
 }) => {
     const classNames = cx(
         'layout',
+        pointer && 'layout__pointer',
         jc && `layout__jc_${jc}`,
         ai && `layout__ai_${ai}`,
         direction ? `layout__direction_${direction}` : 'layout__direction_row',
@@ -36,7 +40,11 @@ const Layout: React.FC<ILayoutProps> = ({
         className && className
     );
 
-    return <div className={classNames}>{children}</div>;
+    return (
+        <div className={classNames} {...props}>
+            {children}
+        </div>
+    );
 };
 
 const Row = props => {

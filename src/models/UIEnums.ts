@@ -3,7 +3,8 @@ enum ColorTypes {
     red = 'red',
     black = 'black',
     blue = 'blue',
-    green = 'green'
+    green = 'green',
+    white = 'white'
 }
 
 enum FontSizeTypes {
@@ -14,6 +15,18 @@ enum FontSizeTypes {
     l = 'l',
     xl = 'xl',
     xxl = 'xxl'
+}
+
+enum IconTypes {
+    iconBackWhite = 'icon-back-white',
+    iconCloseBlack = 'icon-close-black',
+    iconMenu = 'icon-menu'
+}
+
+enum ModalTypes {
+    createFirm = 'createFirm',
+    createContract = 'createContract',
+    infoModal = 'infoModal'
 }
 
 enum JustifyContentTypes {
@@ -60,5 +73,7 @@ export {
     JustifyContentTypes,
     AlignItemsTypes,
     DirectionTypes,
-    MarginTypes
+    MarginTypes,
+    IconTypes,
+    ModalTypes
 };

@@ -1,35 +1,49 @@
 import * as React from 'react';
+import { connect } from 'react-redux';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import routes from 'routes/config.json';
+import { closeModal, openModal } from 'store/reducers/modalReducer/actions';
+import { Modals } from 'widgets/Modals';
+import { Column } from 'ui/Layout';
+import { Main } from 'modules/Main';
+import './style.scss';
 
 const getRenderingComponent = (props, component: string) => {
     switch (component) {
         case 'Main':
-            return 'Main';
-        case 'Different':
-            return 'Different';
+            return <Main />;
         default:
             return null;
     }
 };
 
-const PageBuilder = () => {
+const PageBuilder = ({ modals, closeModal }) => {
     return (
-        <Router>
-            <Switch>
-                {routes.map(({ id, component, url, exact }) => (
-                    <Route
-                        key={id}
-                        path={url}
-                        exact={exact}
-                        render={props =>
-                            getRenderingComponent(props, component)
-                        }
-                    />
-                ))}
-            </Switch>
-        </Router>
+        <Column className="page">
+            <Router>
+                <Switch>
+                    {routes.map(({ id, component, url, exact }) => (
+                        <Route
+                            key={id}
+                            path={url}
+                            exact={exact}
+                            render={props =>
+                                getRenderingComponent(props, component)
+                            }
+                        />
+                    ))}
+                </Switch>
+            </Router>
+            <Modals modals={modals} closeModal={closeModal} />
+        </Column>
     );
 };
 
-export { PageBuilder };
+const ConnectedPageBuilder = connect(
+    ({ modals }) => {
+        return { modals: modals.modals };
+    },
+    { openModal, closeModal }
+)(PageBuilder);
+
+export { ConnectedPageBuilder as PageBuilder };
